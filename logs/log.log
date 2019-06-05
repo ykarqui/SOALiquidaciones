@@ -143,3 +143,112 @@ java.lang.NullPointerException: null
 05-06-2019 12:18:24.085 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 05-06-2019 12:20:46.359 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 05-06-2019 12:22:10.665 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:38:37.785 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:39:32.864 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:41:37.225 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:41:37.228 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE ='2019-06-04'%ORDER BY fecha_pago' at line 1
+05-06-2019 15:42:29.944 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:42:31.241 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:42:31.245 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE ='2019-06-04'% ORDER BY fecha_pago' at line 1
+05-06-2019 15:42:58.004 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.$M  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'liquidacionBusiness': Unsatisfied dependency expressed through field 'liquidacionDAO'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquidacionRepository': Invocation of init method failed; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+05-06-2019 15:42:58.044 o.s.boot.SpringApplication.$M  Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'liquidacionBusiness': Unsatisfied dependency expressed through field 'liquidacionDAO'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquidacionRepository': Invocation of init method failed; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:370) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:548) ~[spring-context-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230) [spring-boot-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+	at ar.edu.iua.soa.banco.BancoApplication.main(BancoApplication.java:10) [classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.0.6.RELEASE.jar:2.0.6.RELEASE]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquidacionRepository': Invocation of init method failed; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:581) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	... 24 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error, insert "... VariableDeclaratorId" to complete FormalParameter
+	Syntax error, insert ")" to complete MethodDeclaration
+	Syntax error, insert ";" to complete MethodDeclaration
+
+	at ar.edu.iua.soa.banco.model.persistence.LiquidacionRepository.<clinit>(LiquidacionRepository.java:18) ~[classes/:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_201]
+	at java.lang.Class.forName(Class.java:264) ~[na:1.8.0_201]
+	at com.sun.proxy.$Proxy133.<clinit>(Unknown Source) ~[na:na]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.8.0_201]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:1.8.0_201]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.8.0_201]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[na:1.8.0_201]
+	at java.lang.reflect.Proxy.newProxyInstance(Proxy.java:739) ~[na:1.8.0_201]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.getProxy(JdkDynamicAopProxy.java:123) ~[spring-aop-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.aop.framework.ProxyFactory.getProxy(ProxyFactory.java:110) ~[spring-aop-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:328) ~[spring-data-commons-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$4(RepositoryFactoryBeanSupport.java:290) ~[spring-data-commons-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:141) ~[spring-data-commons-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.data.util.Lazy.get(Lazy.java:63) ~[spring-data-commons-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:293) ~[spring-data-commons-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:102) ~[spring-data-jpa-2.0.11.RELEASE.jar:2.0.11.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690) ~[spring-beans-5.0.10.RELEASE.jar:5.0.10.RELEASE]
+	... 34 common frames omitted
+05-06-2019 15:43:30.696 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:43:34.984 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:43:34.991 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE ='2019-06-04' ORDER BY fecha_pago' at line 1
+05-06-2019 15:44:48.154 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:44:52.771 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:44:52.777 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE ='2019-06-04%' ORDER BY fecha_pago' at line 1
+05-06-2019 15:45:37.407 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:45:50.187 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:45:50.188 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '2019-06-04%' ORDER BY fecha_pago' at line 1
+05-06-2019 15:46:34.813 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:46:41.762 o.h.e.jdbc.spi.SqlExceptionHelper.$M  SQL Error: 1064, SQLState: 42000
+05-06-2019 15:46:41.764 o.h.e.jdbc.spi.SqlExceptionHelper.$M  You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '2019-06-04%'' at line 1
+05-06-2019 15:49:15.989 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:50:16.037 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:51:05.857 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:52:09.787 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:56:10.056 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:56:44.302 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 15:59:25.551 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 16:00:54.743 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 16:02:09.720 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 16:02:39.859 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 16:05:41.104 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+05-06-2019 16:12:44.164 o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.$M  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning

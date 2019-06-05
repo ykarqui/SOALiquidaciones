@@ -44,7 +44,9 @@ public class LiquidacionBusiness implements ILiquidacionBusiness{
 	@Override
 	public List<Liquidacion> getAllByDate(String date) throws BusinessException {
 		try {
-			return liquidacionDAO.findAllByDate(date);	
+			logger.trace(date); 
+			List <Liquidacion> listaLiquidaciones = liquidacionDAO.findAllByDate(date);
+			return listaLiquidaciones;
 		} catch (Exception e) {
 			logger.error("No se pudo obtener la lista de liquidaciones");
 			logger.error(e);

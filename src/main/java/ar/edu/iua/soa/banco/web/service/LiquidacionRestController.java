@@ -33,7 +33,7 @@ public class LiquidacionRestController {
 			if (fecha.equals("*")) {
 				logger.trace("Getting all liquidaciones");
 				return new ResponseEntity<List<Liquidacion>>(liquidacionBusiness.getAll(), HttpStatus.OK);
-			} else if (fecha.length() == 10) {
+			} else if (fecha.length() > 3) {
 				logger.trace("Getting all liquidaciones, according Date");
 				return new ResponseEntity<List<Liquidacion>>(liquidacionBusiness.getAllByDate(fecha), HttpStatus.OK);
 			}
