@@ -96,6 +96,12 @@ public class Liquidacion {
 	public void setMonto(Double monto) {
 		this.monto = monto;
 	}
+
+	@Override
+	public String toString() {
+		return "Liquidacion [id=" + id + ", legajo=" + legajo + ", fechaPago=" + fechaPago + ", monto=" + monto
+				+ ", estado=" + estado + ", codigo=" + codigo + "]";
+	}
 	
 	
 

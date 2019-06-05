@@ -27,8 +27,6 @@ public class PersonaBusiness implements IPersonaBusiness {
 	@Autowired
 	private PersonaRepository personaDAO;
 	
-	Liquidacion liquidacion = new Liquidacion();
-	
 	TransaccionDTO transaccionDTO = new TransaccionDTO();
 	
 	// Busco el CBU y sueldo de la persona con Legajo indicado
@@ -36,7 +34,8 @@ public class PersonaBusiness implements IPersonaBusiness {
 	public TransaccionDTO getPersona(Integer legajo) throws CBUnotFoundException, BusinessException, NotFoundException {
 		
 		System.out.println("\n\nIngresa al BO persona con legajo:" + legajo +" \n\n");
-		Persona p = personaDAO.findByLegajo(legajo);
+		Persona p = new Persona();
+		p = personaDAO.findByLegajo(legajo);
 		
 		System.out.println("\n\nVuelve del Persona DAO como " + p.toString() + "\n\n");
 		if (p.getCbu() == null || p.getCbu().length() < 1) {
@@ -54,6 +53,8 @@ public class PersonaBusiness implements IPersonaBusiness {
 		// Persisto la liquidacion
 		Date date = new Date();
 		Date fechaPago = new java.sql.Date(date.getTime()); 
+		
+		Liquidacion liquidacion = new Liquidacion();
 		
 		liquidacion.setMonto(transaccionDTO.getMonto());
 		liquidacion.setFechaPago(fechaPago);

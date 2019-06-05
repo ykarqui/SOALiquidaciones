@@ -1,5 +1,7 @@
 package ar.edu.iua.soa.banco.business.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +18,26 @@ public class LiquidacionBusiness implements ILiquidacionBusiness{
 	
 	@Override
 	public Liquidacion saveLiquidacion(Liquidacion liquidacion) throws BusinessException {
-		
-		liquidacionDAO.save(liquidacion);
-		
-		return null;
+		try {
+			return liquidacionDAO.save(liquidacion);	
+		} catch (Exception e) {
+			System.out.println("No se pudo persistir la liquidacion");
+			throw new BusinessException();
+		}
+	}
+
+	@Override
+	public List<Liquidacion> getAll() throws BusinessException {
+		try {
+			return liquidacionDAO.getAll();	
+		} catch (Exception e) {
+			throw new BusinessException(e);
+		}
+	}
+
+	@Override
+	public List<Liquidacion> getAllByDate(String date) throws BusinessException {
+		return liquidacionDAO.findAllByDate(date);
 	}
 	
 
