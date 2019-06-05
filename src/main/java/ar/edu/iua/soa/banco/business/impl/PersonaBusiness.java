@@ -43,9 +43,8 @@ public class PersonaBusiness implements IPersonaBusiness {
 		
 		logger.trace("Vuelve del Persona DAO como " + p.toString());
 		if (p.getCbu() == null || p.getCbu().length() < 1) {
-			logger.error("CBU error");
 			logger.error("CBU obtained: " + p.getCbu());
-			throw new CBUnotFoundException();
+			throw new CBUnotFoundException("Error al obtener el CBU");
 			
 		}
 		
@@ -56,7 +55,6 @@ public class PersonaBusiness implements IPersonaBusiness {
 		
 		// Tx Rest Controller
 		transaccionRC.sentDataToTx(transaccionDTO);
-		logger.trace("Volvi al personaBO");
 		
 		// Persisto la liquidacion
 		Date date = new Date();
