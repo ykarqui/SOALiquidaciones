@@ -2,6 +2,7 @@ package ar.edu.iua.soa.banco.business.impl;
 
 import java.util.Date;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,28 +28,34 @@ public class PersonaBusiness implements IPersonaBusiness {
 	@Autowired
 	private PersonaRepository personaDAO;
 	
-	TransaccionDTO transaccionDTO = new TransaccionDTO();
+	final static Logger logger = Logger.getLogger("PersonaBusiness.class");
 	
 	// Busco el CBU y sueldo de la persona con Legajo indicado
 	@Override
-	public TransaccionDTO getPersona(Integer legajo) throws CBUnotFoundException, BusinessException, NotFoundException {
+	public TransaccionDTO getPersona(Integer legajo) throws CBUnotFoundException, NotFoundException, BusinessException {
 		
-		System.out.println("\n\nIngresa al BO persona con legajo:" + legajo +" \n\n");
+		logger.trace("Ingresa al BO persona con legajo:" + legajo);
 		Persona p = new Persona();
+		if (personaDAO.findByLegajo(legajo) == null) {
+			throw new NotFoundException("Legajo no registrado");
+		}
 		p = personaDAO.findByLegajo(legajo);
 		
-		System.out.println("\n\nVuelve del Persona DAO como " + p.toString() + "\n\n");
+		logger.trace("Vuelve del Persona DAO como " + p.toString());
 		if (p.getCbu() == null || p.getCbu().length() < 1) {
-			
+			logger.error("CBU error");
+			logger.error("CBU obtained: " + p.getCbu());
 			throw new CBUnotFoundException();
 			
 		}
+		
 		// Tx DTO
+		TransaccionDTO transaccionDTO = new TransaccionDTO();
 		transaccionDTO.setCbu(p.getCbu());
 		transaccionDTO.setMonto(p.getMontoMensual());
 		
 		transaccionRC.sentDataToTx(transaccionDTO);
-		System.out.println("\n\nVolvi al personaBO \n\n");
+		logger.trace("Volvi al personaBO");
 		
 		// Persisto la liquidacion
 		Date date = new Date();
@@ -61,10 +68,11 @@ public class PersonaBusiness implements IPersonaBusiness {
 		liquidacion.setLegajo(p.getLegajo());
 		liquidacion.setCodigo(transaccionDTO.getCodigo());
 		liquidacion.setEstado(transaccionDTO.getEstado());
-		System.out.println("\n\nLiquidacion a persistir: "+liquidacion.toString()+ "\n\n");
-		liquidacionBO.saveLiquidacion(liquidacion);
+		logger.trace("Liquidacion a persistir:" + liquidacion.toString());
 		
-		System.out.println("\n\nVuelve del liquidacion BO \n\n");
+		liquidacionBO.saveLiquidacion(liquidacion);
+		logger.trace("Vuelve del liquidacion BO");
+		
 		return transaccionDTO;
 	}
 }

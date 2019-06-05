@@ -5,6 +5,6 @@ import ar.edu.iua.soa.banco.model.exception.CBUnotFoundException;
 import javassist.NotFoundException;
 
 public interface IPersonaBusiness {
-	public TransaccionDTO getPersona(Integer legajo) throws CBUnotFoundException, BusinessException, NotFoundException;
+	public TransaccionDTO getPersona(Integer legajo) throws CBUnotFoundException, NotFoundException ,BusinessException;
 
 }
