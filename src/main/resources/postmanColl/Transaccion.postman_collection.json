@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "6765d77f-19c9-42b8-9934-3ea0f0d5a85b",
+		"name": "Transaccion",
+		"description": "Testing API for SOA project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get by fecha",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8081/verPagos?fecha=2019-06-05",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"verPagos"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2019-06-05"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12340",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "73a7b67a-e7c5-4a55-a3d9-94ea2b873dc3",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12340\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				},
+				"description": "Persona sin CBU y con LEGAJO"
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12350",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f0e24ba6-08a7-42fc-93cf-a51ec708c3a2",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12350\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12360",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f236ff5e-d072-4fa8-8177-ec6a7133cd39",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12360\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12370",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1052c886-329b-44f7-ab80-38213e543cd0",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12370\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12380",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e6f9e5a-049e-47c9-b281-c8a53aaf3259",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12380\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12390",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d23f1855-20be-4894-afaf-ade2a3ee0b74",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12390\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12400",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "482b852b-fa19-4691-887b-b61e907d5af3",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12400\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12410",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3f92564b-f876-4ce6-9dbf-fe06f129d602",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12410\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12420",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9559314-4b8c-4da8-a843-ab2011d9d329",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12420\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12430",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9559314-4b8c-4da8-a843-ab2011d9d329",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12430\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST legajo 12440",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f9559314-4b8c-4da8-a843-ab2011d9d329",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"legajo\": 12440\n}"
+				},
+				"url": {
+					"raw": "localhost:8081/persona",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"persona"
+					]
+				},
+				"description": "Persona sin registrar"
+			},
+			"response": []
+		}
+	]
+}
