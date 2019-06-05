@@ -1,15 +1,7 @@
 package ar.edu.iua.soa.banco.model.dto;
 
 public class TransaccionDTO {
-/*	Post{
-		“cbu”:”	”,
-		“monto”:”	”
-	}
-	response:{
-		“estado”:”	”,	// “ok”  || “error”
-		“codigo”:”	”	// Si esta ok return numero || sino devuelve “error”
-	}
- */
+
 	private String cbu;
 	private Double monto;
 	private String codigo;

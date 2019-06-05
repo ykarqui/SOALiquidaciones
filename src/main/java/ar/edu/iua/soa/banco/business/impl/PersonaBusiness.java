@@ -54,6 +54,7 @@ public class PersonaBusiness implements IPersonaBusiness {
 		transaccionDTO.setCbu(p.getCbu());
 		transaccionDTO.setMonto(p.getMontoMensual());
 		
+		// Tx Rest Controller
 		transaccionRC.sentDataToTx(transaccionDTO);
 		logger.trace("Volvi al personaBO");
 		
